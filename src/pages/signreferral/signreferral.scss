@@ -1,0 +1,18 @@
+page-signreferral {
+    ion-content {
+        text-align: center;
+    }
+    .toolbar-title-md {
+        color:#fff;
+    }
+    h3 {
+        color: #009C4D;
+        padding: 5px;
+        text-align: center;
+        font-weight: bold;
+    }
+    .toolbar-background-md,
+    .toolbar-background-ios {
+        background:#009C4D;
+    }
+}

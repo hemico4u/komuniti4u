@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Referral</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <img src="assets/image/referral-signup.jpg">
+  <h3 txt-center>Greate! Account Created!</h3>
+  <p>Do you have any referral?</p>
+
+   <!-- <ion-item>     
+     <ion-label>  
+      Select Referral Name
+    </ion-label>   
+    <ion-select>
+      <div>
+        <ion-option value=""><span>User 1</span></ion-option>
+        <ion-option value=""><span>User 2</span></ion-option>
+        <ion-option value=""><span>User 3</span></ion-option>
+      </div>
+    </ion-select>
+  </ion-item> -->
+
+  <ion-grid class="add-to-cart grid">
+      <ion-row class="row">
+          <ion-col class="col" width-50="">
+              <button (click)="shop()" color="button-color" full ion-button style="margin: 0;width: 100%; min-height: 50px;background-color: #E13635; color: white; box-shadow: none;" text-uppercase class="button button-md button-default button-default-md button-full button-full-md button-md-button-color"><span class="button-inner">
+              No
+              </span><div class="button-effect"></div></button>
+          </ion-col>
+          <ion-col class="col" width-50="">
+              <button color="button-color" full ion-button style="margin: 0;width: 100%; min-height: 50px;box-shadow: none;background-color: #009C4D;" text-uppercase class="button button-md button-default button-default-md button-full button-full-md button-md-button-color"><span class="button-inner">
+              Yes
+              </span><div class="button-effect"></div></button>
+          </ion-col>
+      </ion-row>
+  </ion-grid>
+
+</ion-content>

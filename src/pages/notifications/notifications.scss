@@ -1,0 +1,42 @@
+page-notifications {
+    .toolbar-background-md,
+    .toolbar-background-ios {
+        background-color: #009C4D;
+    }
+    .toolbar-title-md,
+    .toolbar-title-ios,
+    .bar-button-default-md,
+    .bar-button-default-ios {
+        color: #fff;
+    }
+    .content-md,.content-ios {
+        background-color: #f2f4f7;
+    }
+    .list-header-md,.list-header-ios {
+        background-color: transparent !important;
+        border:none !important;
+    }
+    .item-md, .item-ios {
+        margin-bottom: 10px;
+        border-radius: 5px;
+        border-left: 3px solid #ffc67b;
+    }
+    .list-md .item-block .item-inner,
+    .list-ios .item-block .item-inner {
+        border:none !important;
+    }
+    .button-clear-md-light,
+    .button-outline-md-light,
+    .button-outline-ios-light {
+        color: #ccc;
+        border-color:#ccc;
+    }
+    .label-md,
+    .label-ios {
+        white-space: normal;
+        small {
+            display: block;
+            margin-bottom: 5px;
+        }
+    }
+}

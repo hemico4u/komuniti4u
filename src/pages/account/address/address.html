@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-navbar color="header">
+    <button ion-button menuToggle>
+      <ion-icon name="menu">
+      </ion-icon>
+    </button>
+    <ion-title text-wrap text-center>{{"AddressBook" | translate}}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content text-wrap class="account-address">
+<ion-spinner *ngIf="!addresses" name="crescent" style="display:block; margin-left: auto; margin-right:auto; margin-top: 5px; margin-bottom:5px" ></ion-spinner>
+   <div *ngIf="addresses" class="address">
+      <div *ngIf="addresses.billing">
+      <ion-card>
+        <ion-card-header style="background-color: #f9f9f9">
+          {{"BillingAddress" | translate}}
+        </ion-card-header>
+        <ion-card-content style="margin-top: 10px">
+          {{addresses.billing.first_name}} {{addresses.billing.last_name}}<br *ngIf="addresses.billing.first_name">
+          {{addresses.billing.address_1}}<br *ngIf="addresses.billing.address_1">
+          {{addresses.billing.address_2}}<br *ngIf="addresses.billing.address_2">
+          {{addresses.billing.city}} {{addresses.billing.state}}<br *ngIf="addresses.billing.city">
+          {{addresses.billing.phone}}<br *ngIf="addresses.billing.phone">
+          {{addresses.billing.email}}<br *ngIf="addresses.billing.email">
+          {{addresses.billing.country}} {{addresses.billing.postcode}}<br *ngIf="addresses.billing.postcode">
+        </ion-card-content>
+      </ion-card>
+      </div>
+      <div *ngIf="addresses.shipping">
+      <ion-card>
+        <ion-card-header style="background-color: #f9f9f9">
+          {{"ShippingAddress" | translate}}
+        </ion-card-header>
+        <ion-card-content style="margin-top: 10px">
+          {{addresses.shipping.first_name}} {{addresses.shipping.last_name}}<br *ngIf="addresses.shipping.first_name">
+          {{addresses.shipping.address_1}}<br *ngIf="addresses.shipping.address_1">
+          {{addresses.shipping.address_2}}<br *ngIf="addresses.shipping.address_2">
+          {{addresses.shipping.city}} {{addresses.shipping.state}}<br *ngIf="addresses.shipping.city">
+          {{addresses.shipping.phone}}<br *ngIf="addresses.shipping.phone">
+          {{addresses.shipping.email}}<br *ngIf="addresses.shipping.email">
+          {{addresses.shipping.country}} {{addresses.shipping.postcode}}<br>
+        </ion-card-content>
+      </ion-card>
+      </div>
+      <div class="margin">
+         <button ion-button block color="button-color" type="submit" class="button button-block button-default" text-uppercase (click)="editAddress()">{{"EditAddress" | translate}}</button>
+      </div>
+   </div>
+</ion-content>

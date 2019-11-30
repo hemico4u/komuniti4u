@@ -1,0 +1,66 @@
+page-whatsapplink {
+    .bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default {
+        color:#fff;
+    }
+    text-align: center;
+    .scroll-content {
+        background-color: #EFFFFC;
+    }
+    .toolbar-background-md,
+    .toolbar-background-ios {
+        background-color: #343230;
+    }
+    .toolbar-title-md,
+    .toolbar-title-ios {
+        color:#fff;
+        text-align: left;
+    }
+    .whatsapp_header {
+        background-color: #31BCA4;
+        color:#fff;
+        text-align: center;
+        h5 {
+            font-weight: normal;
+        }
+        h2 {
+            font-weight:bold;
+            font-size: 25px;
+            margin-top:10px;
+        }
+        ion-card {
+            padding-top:20px;
+            padding-bottom:20px;
+            border-radius: 5px;
+            h2 {
+                font-size:21px;
+                font-weight: normal;
+            }
+            .button-md,
+            .button-ios {
+                background-color:#FED54C;
+                color:#000;
+                border-radius: 3px;
+                letter-spacing: normal;
+                text-transform: none;
+                font-weight: bold;
+            }
+            a, a:-webkit-any-link {
+                text-decoration: none;
+            }
+        }
+    }
+    .support_text {
+        text-align: center;
+        p {
+            font-size: 14px;
+            line-height: 21px;
+            text-align: center;
+        }
+        .call {
+            font-size: 31px;
+            color: #31BCA4;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+    }
+}
