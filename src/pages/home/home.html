@@ -131,8 +131,9 @@
                   <ion-col col-6 *ngFor="let item of children.products" [style.padding]="children.padding">
                      <ion-card>
                         <ion-card-content>
-                           <img tappable src="{{item.images[0].src}}" *ngIf="!values.isLoggedIn"> 
-                           <img tappable src="{{item.images[0].src}}" (click)="getProduct(item)" *ngIf="values.isLoggedIn"> 
+<!--                           <img tappable src="{{item.images[0].src}}" *ngIf="!values.isLoggedIn"> -->
+<!--                           <img tappable src="{{item.images[0].src}}" (click)="getProduct(item)" *ngIf="values.isLoggedIn">-->
+                           <img tappable src="{{item.images[0].src}}" (click)="getProduct(item)">
                            <button ion-button color="danger" class="stock" *ngIf="item.stock_status == 'outofstock'">{{"No Stock" | translate}}
                            </button>
                            <!-- <ion-icon name="md-heart" class="wishlist-button-grid1" *ngIf="values.wishlistId[item.id]" (click)="removeFromWishlist(item.id)"></ion-icon>
@@ -141,11 +142,11 @@
                               <button ion-button class="offer" *ngIf="((item.regular_price - item.price) /item.regular_price*100) >= '1'">{{(item.regular_price - item.price) /item.regular_price*100 | number : '1.0-0'}}%</button>
                            </div>
                         </ion-card-content>
-                        <div tappable class="card-name" *ngIf="!values.isLoggedIn">
-                           <ion-label *ngIf="item.title">{{item.title}} </ion-label>
-                           <ion-label *ngIf="item.name">{{item.name}} </ion-label>
-                        </div>
-                        <div tappable (click)="getProduct(item)" class="card-name" *ngIf="values.isLoggedIn">
+<!--                        <div tappable class="card-name" *ngIf="!values.isLoggedIn">-->
+<!--                           <ion-label *ngIf="item.title">{{item.title}} </ion-label>-->
+<!--                           <ion-label *ngIf="item.name">{{item.name}} </ion-label>-->
+<!--                        </div>-->
+                        <div tappable (click)="getProduct(item)" class="card-name">
                            <ion-label *ngIf="item.title">{{item.title}} </ion-label>
                            <ion-label *ngIf="item.name">{{item.name}} </ion-label>
                         </div>
