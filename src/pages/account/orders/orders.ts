@@ -25,12 +25,9 @@ export class Orders {
         this.count = 10;
         this.offset = 0;
         this.quantity = "1";
-        this.filter['filter[customer_id]'] = this.values.customerId.toString();
+        this.filter['customer_id'] = this.values.customerId.toString();
         this.service.getOrders(this.filter)
             .then((results) => this.orders = results);
-        console.log(this.service);
-        // console.log(this.filter);
-        console.log(this.service.getOrders(this.filter));
     }
     doInfinite(infiniteScroll) {
         this.filter.page += 1;

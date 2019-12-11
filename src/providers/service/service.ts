@@ -17,6 +17,8 @@ export class Service {
     banners: any;
     orders: any;
     order: any;
+    // email: any;
+    reorder: any;
     isloggedIn: any;
     status: any;
     address: any;
@@ -296,10 +298,22 @@ export class Service {
         });
     }
     getOrders(filter) {
+        // this.http.get(this.config.setUrl('GET', '/wp-json/wc/v3/customers/' + filter.customer_id + '?', 'consumer_key=ck_d3e62fbfab4308dbff89321bf6d8f0bc58cd85a4&consumer_secret=cs_5d98d4ab1c579ee04482846ca18b00f2cf731c71'), this.config.options).map(res => res.json()).subscribe(datas => {
+        //     this.email = datas.email;
+        // });
         return new Promise(resolve => {
             this.http.get(this.config.setUrl('GET', '/wp-json/wc/v3/orders?', filter), this.config.options).map(res => res.json()).subscribe(data => {
-                this.orders = data;
-                resolve(this.orders);
+                this.reorder = data;
+                // console.log(data);
+                this.orders = [];
+                this.reorder.forEach(values => {
+                    if (values.customer_id == filter.customer_id) {
+                        this.orders.push(values);
+                        resolve(this.orders);
+                    } else {
+                        resolve(this.orders);
+                    }
+                });
             });
         });
     }
