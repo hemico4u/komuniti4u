@@ -1,3 +1,10 @@
 node_modules/
+platforms/
 .sourcemaps/
 .idea/
+
+config.xml
+
+package.json
+
+www/
