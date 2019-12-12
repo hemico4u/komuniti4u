@@ -15,7 +15,6 @@ export class Address {
     constructor(public nav: NavController, public service: Service, public values: Values) {
         this.service.getAddress()
             .then((results) =>{ this.addresses = results;
-                console.log(this.addresses);
                 });
     }
     editAddress() {

@@ -76,7 +76,7 @@ export class MyApp {
                 } else if (result.notification.payload.additionalData.post) {
                     this.post({id: result.notification.payload.additionalData.post});
                 } else if (result.notification.payload.additionalData.order) {
-                    this.nav.push(OrderSummary, {id: result.notification.payload.additionalData.order});
+                    // this.nav.push(OrderSummary, {id: result.notification.payload.additionalData.order});
                 }
             });
             this.oneSignal.endInit();
@@ -165,7 +165,7 @@ export class MyApp {
     contact() {
         let email = {
             to: this.values.settings.support_email,
-            subject: '',
+            subject: 'Apps Komuniti4u',
             body: '',
             isHtml: true
         };

@@ -44,14 +44,14 @@
                 padding: 0 10px;
                 .option-button {
                     color: #111111;
-                    height: 1.8em;
+                    height: 2.1em;
                     .button-inner {
                         font-size: 11px;
                     }
                 }
                 .selected-option {
-                    border: 1px solid #848484;
-                    background-color: #f0f8ff;
+                    border: 1px solid #00bf00;
+                    background-color: rgba(0, 255, 0, 0.2);
                 }
                 textarea {
                     border: 1px solid #f4f4f4;
