@@ -22,14 +22,14 @@
 
     <div *ngIf="orders.length">
       <ion-item *ngFor="let item of orders">
-        <h2>
-          <b>{{"OrderNumber" | translate}} :
-          </b> {{item.order_number}}
-        </h2>
-        <h2>
-          <b>{{"Orderdate" | translate}} :
-          </b> {{item.created_at | date:'medium'}}
-        </h2>
+<!--        <h2>-->
+<!--          <b>{{"OrderNumber" | translate}} :-->
+<!--          </b> {{item.order_number}}-->
+<!--        </h2>-->
+<!--        <h2>-->
+<!--          <b>{{"Orderdate" | translate}} :-->
+<!--          </b> {{item.created_at | date:'medium'}}-->
+<!--        </h2>-->
         <h2>
           <b>{{"Shipto" | translate}} :
           </b> {{item.shipping.first_name}} {{item.shipping.last_name}}, {{item.shipping.address_1}}, {{item.shipping.address_2}}, {{item.shipping.city}}, {{item.shipping.state}}, {{item.shipping.country}}, {{item.shipping.postcode}}

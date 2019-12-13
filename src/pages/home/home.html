@@ -24,11 +24,11 @@
 <ion-content class="home">
       <div *ngIf="!values.isLoggedIn" (click)="register()" class="register_style">
          <!-- <ion-icon name="information-circle"></ion-icon> --><strong>Be Part Of As</strong><br />
-         Register Now! Click here to buy Hot Items.
+         Click Here And Sign Up Now !!!
       </div>
       <div *ngIf="values.isLoggedIn" class="member_offers_style">
          <!-- <ion-icon name="star"></ion-icon>-->Welcome {{values.customerName}}!<br />
-         Enjoy the Best Promotion at Hot Items
+          Enjoy your purchase.
       </div>
    <ion-refresher *ngIf="values.settings.pull_to_refresh == '1'" (ionRefresh)="doRefresh($event)">
    <ion-refresher-content></ion-refresher-content>
