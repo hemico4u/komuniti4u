@@ -48563,7 +48563,7 @@ page-notifications .label-ios small {
 
 .product-page .variation-block .variation-product .option-box .option-button {
   color: #111111;
-  height: 1.8em;
+  height: 2.1em;
 }
 
 .product-page .variation-block .variation-product .option-box .option-button .button-inner {
@@ -48571,8 +48571,8 @@ page-notifications .label-ios small {
 }
 
 .product-page .variation-block .variation-product .option-box .selected-option {
-  border: 1px solid #848484;
-  background-color: #f0f8ff;
+  border: 1px solid #00bf00;
+  background-color: rgba(0, 255, 0, 0.2);
 }
 
 .product-page .variation-block .variation-product .option-box textarea {

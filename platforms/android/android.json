@@ -49,6 +49,34 @@
               "count": 1
             },
             {
+              "xml": "<feature name=\"FacebookConnectPlugin\"><param name=\"android-package\" value=\"org.apache.cordova.facebook.ConnectPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<access origin=\"https://m.facebook.com\" />",
+              "count": 1
+            },
+            {
+              "xml": "<access origin=\"https://graph.facebook.com\" />",
+              "count": 1
+            },
+            {
+              "xml": "<access origin=\"https://api.facebook.com\" />",
+              "count": 1
+            },
+            {
+              "xml": "<access origin=\"https://*.fbcdn.net\" />",
+              "count": 1
+            },
+            {
+              "xml": "<access origin=\"https://*.akamaihd.net\" />",
+              "count": 1
+            },
+            {
+              "xml": "<preference name=\"android-minSdkVersion\" value=\"15\" />",
+              "count": 1
+            },
+            {
               "xml": "<feature name=\"NativeStorage\"><param name=\"android-package\" value=\"NativeStorage\" /></feature>",
               "count": 1
             },
@@ -79,42 +107,6 @@
             {
               "xml": "<feature name=\"OneSignalPush\"><param name=\"android-package\" value=\"com.plugin.gcm.OneSignalPush\" /></feature>",
               "count": 1
-            },
-            {
-              "xml": "<feature name=\"GooglePlus\"><param name=\"android-package\" value=\"nl.xservices.plugins.GooglePlus\" /><param name=\"onload\" value=\"true\" /></feature>",
-              "count": 1
-            },
-            {
-              "xml": "<access origin=\"https://accounts.google.com/*\" />",
-              "count": 1
-            },
-            {
-              "xml": "<feature name=\"FacebookConnectPlugin\"><param name=\"android-package\" value=\"org.apache.cordova.facebook.ConnectPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
-              "count": 1
-            },
-            {
-              "xml": "<access origin=\"https://m.facebook.com\" />",
-              "count": 1
-            },
-            {
-              "xml": "<access origin=\"https://graph.facebook.com\" />",
-              "count": 1
-            },
-            {
-              "xml": "<access origin=\"https://api.facebook.com\" />",
-              "count": 1
-            },
-            {
-              "xml": "<access origin=\"https://*.fbcdn.net\" />",
-              "count": 1
-            },
-            {
-              "xml": "<access origin=\"https://*.akamaihd.net\" />",
-              "count": 1
-            },
-            {
-              "xml": "<preference name=\"android-minSdkVersion\" value=\"15\" />",
-              "count": 1
             }
           ]
         }
@@ -139,7 +131,7 @@
               "count": 1
             },
             {
-              "xml": "<receiver android:name=\"com.onesignal.ADMMessageHandler$Receiver\" android:permission=\"com.amazon.device.messaging.permission.SEND\"><intent-filter><action android:name=\"com.amazon.device.messaging.intent.REGISTRATION\" /><action android:name=\"com.amazon.device.messaging.intent.RECEIVE\" /><category android:name=\"app.komunity.io\" /></intent-filter></receiver>",
+              "xml": "<receiver android:name=\"com.onesignal.ADMMessageHandler$Receiver\" android:permission=\"com.amazon.device.messaging.permission.SEND\"><intent-filter><action android:name=\"com.amazon.device.messaging.intent.REGISTRATION\" /><action android:name=\"com.amazon.device.messaging.intent.RECEIVE\" /><category android:name=\"app.komunity4u.io\" /></intent-filter></receiver>",
               "count": 1
             }
           ],
@@ -157,23 +149,19 @@
               "count": 1
             },
             {
-              "xml": "<uses-permission android:name=\"com.amazon.device.messaging.permission.RECEIVE\" />",
-              "count": 1
-            },
-            {
-              "xml": "<permission android:name=\"app.komunity.io.permission.RECEIVE_ADM_MESSAGE\" android:protectionLevel=\"signature\" />",
-              "count": 1
-            },
-            {
-              "xml": "<uses-permission android:name=\"app.komunity.io.permission.RECEIVE_ADM_MESSAGE\" />",
-              "count": 1
-            },
-            {
               "xml": "<uses-permission android:name=\"android.permission.GET_ACCOUNTS\" />",
               "count": 1
             },
             {
-              "xml": "<uses-permission android:name=\"android.permission.USE_CREDENTIALS\" />",
+              "xml": "<uses-permission android:name=\"com.amazon.device.messaging.permission.RECEIVE\" />",
+              "count": 1
+            },
+            {
+              "xml": "<permission android:name=\"app.komunity4u.io.permission.RECEIVE_ADM_MESSAGE\" android:protectionLevel=\"signature\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-permission android:name=\"app.komunity4u.io.permission.RECEIVE_ADM_MESSAGE\" />",
               "count": 1
             }
           ],
@@ -215,25 +203,15 @@
           ]
         }
       },
-      "config.xml": {
-        "parents": {
-          "/*": [
-            {
-              "xml": "<feature name=\"Keyboard\"><param name=\"android-package\" onload=\"true\" value=\"io.ionic.keyboard.IonicKeyboard\" /></feature>",
-              "count": 1
-            }
-          ]
-        }
-      },
       "res/values/facebookconnect.xml": {
         "parents": {
           "/*": [
             {
-              "xml": "<string name=\"fb_app_id\">2385474901705040</string>",
+              "xml": "<string name=\"fb_app_id\">3136422116430749</string>",
               "count": 1
             },
             {
-              "xml": "<string name=\"fb_app_name\">Komuniti4U</string>",
+              "xml": "<string name=\"fb_app_name\">Komuniti4u</string>",
               "count": 1
             },
             {
@@ -247,15 +225,25 @@
         "parents": {
           "/*": [
             {
-              "xml": "<string name=\"fb_app_id\">2385474901705040</string>",
+              "xml": "<string name=\"fb_app_id\">3136422116430749</string>",
               "count": 1
             },
             {
-              "xml": "<string name=\"fb_app_name\">Komuniti4U</string>",
+              "xml": "<string name=\"fb_app_name\">Komuniti4u</string>",
               "count": 1
             },
             {
               "xml": "<bool name=\"fb_hybrid_app_events\">false</bool>",
+              "count": 1
+            }
+          ]
+        }
+      },
+      "config.xml": {
+        "parents": {
+          "/*": [
+            {
+              "xml": "<feature name=\"Keyboard\"><param name=\"android-package\" onload=\"true\" value=\"io.ionic.keyboard.IonicKeyboard\" /></feature>",
               "count": 1
             }
           ]
@@ -265,74 +253,70 @@
   },
   "installed_plugins": {
     "com-sarriaroman-photoviewer": {
-      "PACKAGE_NAME": "app.komunity.io"
+      "PACKAGE_NAME": "app.komunity4u.io"
     },
     "cordova-plugin-file": {
-      "PACKAGE_NAME": "app.komunity.io"
+      "PACKAGE_NAME": "app.komunity4u.io"
     },
     "cordova-plugin-advanced-http": {
-      "PACKAGE_NAME": "app.komunity.io"
+      "PACKAGE_NAME": "app.komunity4u.io"
     },
     "cordova-plugin-dialogs": {
-      "PACKAGE_NAME": "app.komunity.io"
+      "PACKAGE_NAME": "app.komunity4u.io"
     },
     "cordova-plugin-globalization": {
-      "PACKAGE_NAME": "app.komunity.io"
+      "PACKAGE_NAME": "app.komunity4u.io"
     },
     "cordova-plugin-inappbrowser": {
-      "PACKAGE_NAME": "app.komunity.io"
+      "PACKAGE_NAME": "app.komunity4u.io"
     },
     "cordova-plugin-apprate": {
-      "PACKAGE_NAME": "app.komunity.io"
+      "PACKAGE_NAME": "app.komunity4u.io"
     },
     "cordova-plugin-device": {
-      "PACKAGE_NAME": "app.komunity.io"
+      "PACKAGE_NAME": "app.komunity4u.io"
     },
     "cordova-plugin-email-composer": {
-      "PACKAGE_NAME": "app.komunity.io"
-    },
-    "cordova-plugin-ionic-keyboard": {
-      "PACKAGE_NAME": "app.komunity.io"
-    },
-    "cordova-plugin-ionic-webview": {
-      "PACKAGE_NAME": "app.komunity.io"
-    },
-    "cordova-plugin-nativestorage": {
-      "PACKAGE_NAME": "app.komunity.io"
-    },
-    "cordova-plugin-network-information": {
-      "PACKAGE_NAME": "app.komunity.io"
-    },
-    "es6-promise-plugin": {
-      "PACKAGE_NAME": "app.komunity.io"
-    },
-    "cordova-plugin-screen-orientation": {
-      "PACKAGE_NAME": "app.komunity.io"
-    },
-    "cordova-plugin-splashscreen": {
-      "PACKAGE_NAME": "app.komunity.io"
-    },
-    "cordova-plugin-whitelist": {
-      "PACKAGE_NAME": "app.komunity.io"
-    },
-    "cordova-plugin-x-socialsharing": {
-      "PACKAGE_NAME": "app.komunity.io"
-    },
-    "mx.ferreyra.callnumber": {
-      "PACKAGE_NAME": "app.komunity.io"
-    },
-    "onesignal-cordova-plugin": {
-      "PACKAGE_NAME": "app.komunity.io"
-    },
-    "cordova-plugin-googleplus": {
-      "PLAY_SERVICES_VERSION": "15.0.1",
       "PACKAGE_NAME": "app.komunity4u.io"
     },
     "cordova-plugin-facebook4": {
-      "APP_ID": "2385474901705040",
-      "APP_NAME": "Komuniti4U",
+      "APP_ID": "3136422116430749",
+      "APP_NAME": "Komuniti4u",
       "FACEBOOK_HYBRID_APP_EVENTS": "false",
       "FACEBOOK_ANDROID_SDK_VERSION": "5.5.2",
+      "PACKAGE_NAME": "app.komunity4u.io"
+    },
+    "cordova-plugin-ionic-keyboard": {
+      "PACKAGE_NAME": "app.komunity4u.io"
+    },
+    "cordova-plugin-ionic-webview": {
+      "PACKAGE_NAME": "app.komunity4u.io"
+    },
+    "cordova-plugin-nativestorage": {
+      "PACKAGE_NAME": "app.komunity4u.io"
+    },
+    "cordova-plugin-network-information": {
+      "PACKAGE_NAME": "app.komunity4u.io"
+    },
+    "es6-promise-plugin": {
+      "PACKAGE_NAME": "app.komunity4u.io"
+    },
+    "cordova-plugin-screen-orientation": {
+      "PACKAGE_NAME": "app.komunity4u.io"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "app.komunity4u.io"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "app.komunity4u.io"
+    },
+    "cordova-plugin-x-socialsharing": {
+      "PACKAGE_NAME": "app.komunity4u.io"
+    },
+    "mx.ferreyra.callnumber": {
+      "PACKAGE_NAME": "app.komunity4u.io"
+    },
+    "onesignal-cordova-plugin": {
       "PACKAGE_NAME": "app.komunity4u.io"
     }
   },
@@ -635,6 +619,14 @@
       ]
     },
     {
+      "id": "cordova-plugin-facebook4.FacebookConnectPlugin",
+      "file": "plugins/cordova-plugin-facebook4/www/facebook-native.js",
+      "pluginId": "cordova-plugin-facebook4",
+      "clobbers": [
+        "facebookConnectPlugin"
+      ]
+    },
+    {
       "id": "cordova-plugin-ionic-keyboard.keyboard",
       "file": "plugins/cordova-plugin-ionic-keyboard/www/android/keyboard.js",
       "pluginId": "cordova-plugin-ionic-keyboard",
@@ -722,22 +714,6 @@
       "clobbers": [
         "OneSignal"
       ]
-    },
-    {
-      "id": "cordova-plugin-googleplus.GooglePlus",
-      "file": "plugins/cordova-plugin-googleplus/www/GooglePlus.js",
-      "pluginId": "cordova-plugin-googleplus",
-      "clobbers": [
-        "window.plugins.googleplus"
-      ]
-    },
-    {
-      "id": "cordova-plugin-facebook4.FacebookConnectPlugin",
-      "file": "plugins/cordova-plugin-facebook4/www/facebook-native.js",
-      "pluginId": "cordova-plugin-facebook4",
-      "clobbers": [
-        "facebookConnectPlugin"
-      ]
     }
   ],
   "plugin_metadata": {
@@ -750,6 +726,7 @@
     "cordova-plugin-apprate": "1.3.0",
     "cordova-plugin-device": "2.0.3",
     "cordova-plugin-email-composer": "0.8.15",
+    "cordova-plugin-facebook4": "6.2.0",
     "cordova-plugin-ionic-keyboard": "2.1.3",
     "cordova-plugin-ionic-webview": "1.2.1",
     "cordova-plugin-nativestorage": "2.3.1",
@@ -760,8 +737,6 @@
     "cordova-plugin-whitelist": "1.3.4",
     "cordova-plugin-x-socialsharing": "5.3.2",
     "mx.ferreyra.callnumber": "0.0.2",
-    "onesignal-cordova-plugin": "2.3.1",
-    "cordova-plugin-googleplus": "8.1.2",
-    "cordova-plugin-facebook4": "6.2.0"
+    "onesignal-cordova-plugin": "2.3.1"
   }
 }

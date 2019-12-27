@@ -297,6 +297,14 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
       ]
     },
     {
+      "id": "cordova-plugin-facebook4.FacebookConnectPlugin",
+      "file": "plugins/cordova-plugin-facebook4/www/facebook-native.js",
+      "pluginId": "cordova-plugin-facebook4",
+      "clobbers": [
+        "facebookConnectPlugin"
+      ]
+    },
+    {
       "id": "cordova-plugin-ionic-keyboard.keyboard",
       "file": "plugins/cordova-plugin-ionic-keyboard/www/android/keyboard.js",
       "pluginId": "cordova-plugin-ionic-keyboard",
@@ -396,6 +404,7 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
     "cordova-plugin-apprate": "1.3.0",
     "cordova-plugin-device": "2.0.3",
     "cordova-plugin-email-composer": "0.8.15",
+    "cordova-plugin-facebook4": "6.2.0",
     "cordova-plugin-ionic-keyboard": "2.1.3",
     "cordova-plugin-ionic-webview": "1.2.1",
     "cordova-plugin-nativestorage": "2.3.1",

@@ -6,8 +6,8 @@ import { Values } from '../../../providers/service/values';
 import { Home } from '../../home/home';
 import { AccountForgotten } from '../forgotten/forgotten';
 import { OneSignal } from '@ionic-native/onesignal';
-import { Facebook } from '@ionic-native/facebook';
-import { GooglePlus } from '@ionic-native/google-plus';
+import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook/ngx';
+// import { GooglePlus } from '@ionic-native/google-plus/ngx';
 
 @Component({
     templateUrl: 'login.html'
@@ -27,8 +27,8 @@ export class AccountLogin {
         public values: Values,
         public platform: Platform,
         private oneSignal: OneSignal,
-        private googlePlus: GooglePlus,
-        private fb: Facebook
+        private fb: Facebook,
+        // private googlePlus: GooglePlus,
         ) {
             this.loginData = {};
             this.buttonText = "Login";
@@ -73,42 +73,51 @@ export class AccountLogin {
     }
 
     //Social Media Login
-    /* facebookLogin() {
-        this.facebookSpinner = true;
-        this.fb.login(['public_profile', 'user_friends', 'email']).then((response) => {
-            this.service.sendToken(response.authResponse.accessToken).then((results) => {
-                this.facebookSpinner = false;
-                this.nav.setRoot(TabsPage);
-                
-                this.functions.showAlert('success', 'Logged in successfully');
-            });
-        }).catch((error) => {
-            console.log(error)
-            this.facebookSpinner = false;
-            this.functions.showAlert('Error', error);
-        });
+
+    facebookLogin() {
+        console.log('Logged into Facebook!')
+        this.fb.login(['public_profile', 'user_friends', 'email'])
+            .then((res: FacebookLoginResponse) => console.log('Logged into Facebook!', res))
+            .catch(e => console.log('Error logging into Facebook', e));
     }
-    gmailLogin() {
-        this.googleSpinner = true;
-        this.googlePlus.login({
-            'scopes': '',
-            'webClientId': this.config.webClientId,
-            'offline': true
-        }).then((res) => {
-             this.gres = res;
-             console.log(this.gres);
-            this.googleSpinner = false;
-            this.values.avatar = res.imageUrl;
-            
-            this.service.googleLogin(res).then((results) => {
-                this.functions.showAlert('success', 'Logged in successfully');
-                this.nav.setRoot(TabsPage);
-            });
-        }).catch((err) => {
-            this.googleSpinner = false;
-            this.error = err;
-            this.functions.showAlert('Error', err);
-            console.error(err);
-        });
-    } */
+
+
+    //  facebookLogin() {
+    //     this.facebookSpinner = true;
+    //     this.fb.login(['public_profile', 'user_friends', 'email']).then((response) => {
+    //         this.service.sendToken(response.authResponse.accessToken).then((results) => {
+    //             this.facebookSpinner = false;
+    //             this.nav.setRoot(TabsPage);
+    //
+    //             this.functions.showAlert('success', 'Logged in successfully');
+    //         });
+    //     }).catch((error) => {
+    //         console.log(error)
+    //         this.facebookSpinner = false;
+    //         this.functions.showAlert('Error', error);
+    //     });
+    // }
+    /* gmailLogin() {
+         this.googleSpinner = true;
+         this.googlePlus.login({
+             'scopes': '',
+             'webClientId': this.config.webClientId,
+             'offline': true
+         }).then((res) => {
+              this.gres = res;
+              console.log(this.gres);
+             this.googleSpinner = false;
+             this.values.avatar = res.imageUrl;
+
+             this.service.googleLogin(res).then((results) => {
+                 this.functions.showAlert('success', 'Logged in successfully');
+                 this.nav.setRoot(TabsPage);
+             });
+         }).catch((err) => {
+             this.googleSpinner = false;
+             this.error = err;
+             this.functions.showAlert('Error', err);
+             console.error(err);
+         });
+     } */
 }

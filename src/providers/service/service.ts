@@ -22,7 +22,10 @@ export class Service {
     isloggedIn: any;
     status: any;
     address: any;
+    reproducts: any;
     products: any;
+    check: any;
+    loadmore: any;
     product: any;
     cart: any;
     configuration: any;
@@ -350,15 +353,43 @@ export class Service {
     }
     // Add MemberPromo Product ID To Prevent It To Display Inside Home Screen
     getProducts() {
-        this.http.get(this.config.setUrl('GET', '/wp-json/wc/v3/products?exclude=5377,5456,5457,5458,7853,7852,7956,7955,5378,7952&', false), this.config.options).map(res => res.json()).subscribe(data => {
-            this.products = data;
+        this.http.get(this.config.setUrl('GET', '/wp-json/wc/v3/products?', false), this.config.options).map(res => res.json()).subscribe(data => {
+            // console.log(data);
+            this.reproducts = data;
+            this.products = [];
+            this.reproducts.forEach(values => {
+                if (values.catalog_visibility == "visible") {
+                    values.categories.forEach(valuesa => {
+                        if (valuesa.id != 210) {
+                            this.check = true;
+                        } else {this.check = false;}
+                    });
+                    if (this.check == true){
+                        this.products.push(values);
+                    }
+                }
+            });
         });
     }
     loadMore() {
         this.filter.page += 1;
         return new Promise(resolve => {
-            this.http.get(this.config.setUrl('GET', '/wp-json/wc/v3/products?exclude=5377,5456,5457,5458,7853,7852,7956,7955,5378,7952&', this.filter), this.config.options).map(res => res.json()).subscribe(data => {
-                this.handleMore(data);
+            this.http.get(this.config.setUrl('GET', '/wp-json/wc/v3/products?', this.filter), this.config.options).map(res => res.json()).subscribe(data => {
+                // console.log(data);
+                this.loadmore = [];
+                data.forEach(values => {
+                    if (values.catalog_visibility == "visible") {
+                        values.categories.forEach(valuesa => {
+                            if (valuesa.id != 210) {
+                                this.check = true;
+                            } else {this.check = false;}
+                        });
+                        if (this.check == true){
+                            this.loadmore.push(values);
+                        }
+                    }
+                });
+                this.handleMore(this.loadmore);
                 resolve(true);
             });
         });

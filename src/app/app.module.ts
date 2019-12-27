@@ -53,8 +53,8 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { OneSignal } from '@ionic-native/onesignal';
 import { HTTP } from '@ionic-native/http';
 
-import { Facebook } from '@ionic-native/facebook';
-import { GooglePlus } from '@ionic-native/google-plus';
+import { Facebook } from '@ionic-native/facebook/ngx';
+// import { GooglePlus } from '@ionic-native/google-plus/ngx';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -144,7 +144,7 @@ export function createTranslateLoader(http: HttpClient) {
   EmailComposer,
   CallNumber,
   Facebook,
-  GooglePlus,
+  // GooglePlus,
   HTTP,
   {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
